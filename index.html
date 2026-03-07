@@ -16,21 +16,46 @@ background:#f5f6fa;
 /* HEADER */
 
 .header{
-background:#5a0f2e;
+background: linear-gradient(90deg,#1f4e79,#2f6fa3);
 color:white;
-padding:10px 20px;
+padding:25px 20px;
+margin-bottom:25px;
+font-family:Arial, sans-serif;
 }
 
-.header-inner{
+.header-top{
 display:flex;
 align-items:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
-.header-logo{
-width:200px;
-margin-right:40px;
+.logo{
+height:60px;
 }
 
+.header h1{
+margin:0;
+font-size:24px;
+letter-spacing:0.5px;
+}
+
+.header hr{
+border:none;
+border-top:1px solid rgba(255,255,255,0.4);
+margin:18px 0;
+}
+
+.vision h3{
+margin-bottom:8px;
+}
+
+.vision p{
+margin:0;
+line-height:1.6;
+font-size:15px;
+max-width:900px;
+}
 /* SIDEBAR */
 
 .sidebar{
@@ -81,56 +106,25 @@ text-align:center;
 
 <div class="header">
 
-<div class="header-inner">
+<div class="header-top">
+<img src="images/altus.png" class="logo">
 
-<img src="images/altus.png" class="header-logo">
-
-<div style="
-background:linear-gradient(90deg,#1f4e79,#2f6fa3);
-color:white;
-padding:22px 26px;
-border-radius:8px;
-margin-bottom:25px;
-box-shadow:0 4px 10px rgba(0,0,0,0.15);
-font-family:Arial, sans-serif;
-">
-
-<h1 style="
-margin-top:0;
-margin-bottom:12px;
-text-align:center;
-letter-spacing:0.5px;
-">
+<h1>
 Know Your Candidates – Towards a Transparent Society Governance
 </h1>
+</div>
 
-<hr style="
-border:none;
-border-top:1px solid rgba(255,255,255,0.4);
-margin:16px 0;
-">
+<hr>
 
-<h3 style="
-margin-bottom:8px;
-letter-spacing:0.5px;
-">
-Our Vision
-</h3>
+<div class="vision">
+<h3>Our Vision</h3>
 
-<p style="
-margin:0;
-line-height:1.6;
-font-size:15px;
-max-width:900px;
-">
+<p>
 To apply a <strong>technical, financial, and digital approach</strong> to society governance —
 ensuring <strong>clear communication, proper issue tracking, coordinated follow-ups,
 and collective participation</strong> so that we can build a
 <strong>well-managed, safe, and harmonious community</strong> for all residents.
 </p>
-
-</div>
-
 </div>
 
 </div>
