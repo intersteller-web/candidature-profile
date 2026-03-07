@@ -125,7 +125,14 @@ Kartik Natrajan
 <div class="candidate-item" onclick="showCandidate('amol')">
 Amol Shivale
 </div>
+<hr class="mx-3">
 
+<div class="px-3 pt-2 pb-1 text-muted small">
+Information
+</div>
+<div class="candidate-item" onclick="showRumoursReality()">
+Rumours VS Reality, A MUST READ
+</div>
 </div>
 
 
@@ -269,6 +276,55 @@ ${c.phone}
 </a>
 </strong>
 </p>
+
+`
+
+}
+
+function showRumoursReality(){
+
+document.getElementById("candidateDetails").innerHTML = `
+
+<h2>Test content</h2>
+
+<p class="text-muted">
+Clarifying common rumours with actual facts.
+</p>
+
+<table class="table table-bordered table-striped mt-3">
+
+<thead class="table-light">
+<tr>
+<th style="width:50%">Rumours</th>
+<th style="width:50%">Reality</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Rumour example 1</td>
+<td>Actual explanation clarifying the rumour.</td>
+</tr>
+
+<tr>
+<td>Rumour example 2</td>
+<td>This is the factual clarification.</td>
+</tr>
+
+<tr>
+<td>Rumour example 3</td>
+<td>The truth behind the statement.</td>
+</tr>
+
+<tr>
+<td>Rumour example 4</td>
+<td>Reality and proper information.</td>
+</tr>
+
+</tbody>
+
+</table>
 
 `
 
