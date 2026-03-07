@@ -449,15 +449,15 @@ contribution:[
 
 }
 
+function createList(items) {
+  return items.map(item => `<li>${item}</li>`).join("");
+}
+
 function showCandidate(id){
 
 let c = candidates[id]
-
-let workList = ""
-
-c.work.forEach(w=>{
-workList += "<li>"+w+"</li>"
-})
+let workList = createList(c.work)
+let contributionList = createList(c.contribution)
 
 document.getElementById("candidateDetails").innerHTML = `
 
@@ -568,34 +568,6 @@ Clarifying common rumours with actual facts.
 
 }
 
-function showCandidateDetails(candidate) {
-
-  const workHtml = candidate.work
-    .map(item => `<li>${item}</li>`)
-    .join("");
-
-  const contributionsHtml = candidate.contribution
-    .map(item => `<li>${item}</li>`)
-    .join("");
-
-  document.getElementById("rightPanel").innerHTML = `
-    <div style="background:#f4f7fb;padding:20px;border-radius:8px;border-left:5px solid #1f4e79;">
-      <h3 style="color:#1f4e79;">Contribution</h3>
-      <ul style="line-height:1.6;">
-        ${contributionsHtml}
-      </ul>
-    </div>
-  `;
-
-    document.getElementById("rightPanel").innerHTML = `
-    <div style="background:#f4f7fb;padding:20px;border-radius:8px;border-left:5px solid #1f4e79;">
-      <h3 style="color:#1f4e79;">Work</h3>
-      <ul style="line-height:1.6;">
-        ${workHtml}
-      </ul>
-    </div>
-  `;
-}
 </script>
 
 </body>
