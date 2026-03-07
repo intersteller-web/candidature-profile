@@ -1,50 +1,160 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>Society Election Candidates</title>
+<title>Society Candidates</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+background:#f5f6fa;
+}
+
+.sidebar{
+height:100vh;
+background:white;
+border-right:1px solid #ddd;
+overflow-y:auto;
+}
+
+.candidate-item{
+cursor:pointer;
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.candidate-item:hover{
+background:#eef2ff;
+}
+
+.candidate-photo{
+width:150px;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="container mt-5">
-
-<h1 class="text-center mb-5">Society Election Candidates</h1>
+<div class="container-fluid">
 
 <div class="row">
 
-<div class="col-md-4">
-<div class="card shadow">
-<img src="images/sandesh.jpeg" class="card-img-top">
+<!-- LEFT PANEL -->
 
-<div class="card-body text-center">
-<h5 class="card-title">Sandesh Garud</h5>
-<p class="card-text">Click to view contributions</p>
-<a href="candidates/Sandesh.html" class="btn btn-primary">View Profile</a>
+<div class="col-md-3 sidebar">
+
+<h4 class="p-3">Candidates</h4>
+
+<div class="candidate-item" onclick="showCandidate('rahul')">
+Rahul Patil
+</div>
+
+<div class="candidate-item" onclick="showCandidate('vaibhav')">
+Vaibhav Shinde
+</div>
+
+<div class="candidate-item" onclick="showCandidate('ankit')">
+Ankit Sharma
 </div>
 
 </div>
-</div>
 
-<!-- <div class="col-md-4">
-<div class="card shadow">
-<img src="images/candidate2.jpg" class="card-img-top">
 
-<div class="card-body text-center">
-<h5 class="card-title">Ambar</h5>
-<p class="card-text">Click to view contributions</p>
-<a href="candidates/candidate2.html" class="btn btn-primary">View Profile</a>
-</div>
+<!-- RIGHT PANEL -->
 
-</div>
-</div> -->
+<div class="col-md-9 p-4">
+
+<div id="candidateDetails">
+
+<h3>Select a candidate</h3>
+<p>Click a name from the left panel to view details.</p>
 
 </div>
 
 </div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const candidates = {
+
+rahul:{
+name:"Rahul Patil",
+photo:"images/candidate1.jpg",
+work:[
+"Organized society cleanliness drive",
+"Improved security monitoring",
+"Started kids sports activities"
+],
+contribution:"Actively working in society development for last 3 years."
+},
+
+vaibhav:{
+name:"Vaibhav Shinde",
+photo:"images/candidate2.jpg",
+work:[
+"Resolved water supply issues",
+"Organized community cultural events",
+"Improved parking discipline"
+],
+contribution:"Focused on improving society infrastructure and transparency."
+},
+
+ankit:{
+name:"Ankit Sharma",
+photo:"images/candidate3.jpg",
+work:[
+"Maintained garden and green spaces",
+"Introduced waste segregation program",
+"Coordinated festival celebrations"
+],
+contribution:"Strong supporter of environmental initiatives in the society."
+}
+
+}
+
+function showCandidate(id){
+
+let c = candidates[id]
+
+let workList = ""
+
+c.work.forEach(w=>{
+workList += "<li>"+w+"</li>"
+})
+
+document.getElementById("candidateDetails").innerHTML = `
+
+<h2>${c.name}</h2>
+
+<img src="${c.photo}" class="candidate-photo">
+
+<h4>Work Done</h4>
+
+<ul>
+${workList}
+</ul>
+
+<h4>Contribution</h4>
+
+<p>${c.contribution}</p>
+
+`
+
+}
+
+</script>
 
 </body>
 </html>
