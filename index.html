@@ -152,11 +152,12 @@ Get in touch with us :
 
 <script>
 
-const candidates = {
+const candidates = {const candidates = {
 
 sandesh:{
 name:"Sandesh Garud",
-photo:"images/sandeshG.jpeg",
+phone:"+91 9876543210",
+photo:"images/sandesh.jpeg",
 work:[
 "Organized society cleanliness drive",
 "Improved security monitoring",
@@ -167,6 +168,7 @@ contribution:"Actively working in society development for last 3 years."
 
 ambar:{
 name:"Ambar Srivastava",
+phone:"+91 9876543211",
 photo:"images/ambar.jpeg",
 work:[
 "Resolved water supply issues",
@@ -178,6 +180,7 @@ contribution:"Focused on improving society infrastructure and transparency."
 
 nilesh:{
 name:"Nilesh Shete",
+phone:"+91 9876543212",
 photo:"images/nilesh.jpeg",
 work:[
 "Maintained garden and green spaces",
@@ -189,29 +192,8 @@ contribution:"Strong supporter of environmental initiatives in the society."
 
 mahesh:{
 name:"Mahesh Gadekar",
+phone:"+91 9876543213",
 photo:"images/mahesh.jpeg",
-work:[
-"Maintained garden and green spaces",
-"Introduced waste segregation program",
-"Coordinated festival celebrations"
-],
-contribution:"Strong supporter of environmental initiatives in the society."
-},
-
-kartik:{
-name:"Kartik Natrajan",
-photo:"images/kartik.jpeg",
-work:[
-"Maintained garden and green spaces",
-"Introduced waste segregation program",
-"Coordinated festival celebrations"
-],
-contribution:"Strong supporter of environmental initiatives in the society."
-},
-
-amol:{
-name:"Amol Shivale",
-photo:"images/amol.jpeg",
 work:[
 "Maintained garden and green spaces",
 "Introduced waste segregation program",
@@ -248,10 +230,21 @@ ${workList}
 
 <p>${c.contribution}</p>
 
+<hr>
+
+<h5>Get in touch with ${c.name} for any queries:</h5>
+
+<p>
+<strong>
+<a href="tel:${c.phone}">
+${c.phone}
+</a>
+</strong>
+</p>
+
 `
 
 }
-
 </script>
 
 </body>
