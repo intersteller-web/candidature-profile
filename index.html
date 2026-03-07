@@ -251,9 +251,16 @@ name:"Amol Shivale - D1207",
 phone:"+91 9623758578",
 photo:"images/amol.jpeg",
 work:[
-"Maintained garden and green spaces",
-"Introduced waste segregation program",
-"Coordinated festival celebrations"
+      "Maintained garden and green spaces to keep the society clean, healthy, and pleasant for all residents.",
+      "Introduced and promoted waste segregation initiatives to support environmental sustainability in the society.",
+      "Successfully coordinated major festival celebrations including Ganesh Chaturthi, Navratri, Christmas, and community events.",
+      "Organised fun fair arrangements during Ganesh Festival and Christmas for families and children.",
+      "Took initiative against illegal parking by raising police complaints and ensuring removal of unauthorised vehicles.",
+      "Identified and reported loud modified Bullet silencers, helping reduce noise pollution.",
+      "Followed up on nearby wine shop issues and coordinated with media regarding public drinking concerns.",
+      "Coordinated with Pune Mirror reporters to highlight important civic issues affecting the society.",
+      "Handled society security coordination and monitoring for better safety management.",
+      "Worked with residents and authorities to resolve community issues and maintain a peaceful environment."
 ],
 contribution:"Strong supporter of environmental initiatives in the society."
 },
@@ -437,6 +444,22 @@ Clarifying common rumours with actual facts.
 
 `
 
+}
+
+function showCandidateDetails(candidate) {
+
+  const contributionsHtml = candidate.work
+    .map(item => `<li>${item}</li>`)
+    .join("");
+
+  document.getElementById("rightPanel").innerHTML = `
+    <div style="background:#f4f7fb;padding:20px;border-radius:8px;border-left:5px solid #1f4e79;">
+      <h3 style="color:#1f4e79;">Work & Contributions</h3>
+      <ul style="line-height:1.6;">
+        ${contributionsHtml}
+      </ul>
+    </div>
+  `;
 }
 </script>
 
