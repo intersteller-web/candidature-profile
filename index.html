@@ -13,14 +13,25 @@ body{
 background:#f5f6fa;
 }
 
+/* HEADER */
+
 .header{
-background:#0d6efd;
+background:#5a0f2e;
 color:white;
-padding:15px;
-text-align:center;
-font-size:24px;
-font-weight:bold;
+padding:10px 20px;
 }
+
+.header-inner{
+display:flex;
+align-items:center;
+}
+
+.header-logo{
+width:50px;
+margin-right:15px;
+}
+
+/* SIDEBAR */
 
 .sidebar{
 height:calc(100vh - 120px);
@@ -45,6 +56,8 @@ border-radius:10px;
 margin-bottom:15px;
 }
 
+/* FOOTER */
+
 .footer{
 background:#212529;
 color:white;
@@ -61,7 +74,15 @@ text-align:center;
 <!-- HEADER -->
 
 <div class="header">
-Ganga Altus Candidates
+
+<div class="header-inner">
+
+<img src="images/logo.png" class="header-logo">
+
+<h4 class="mb-0">Ganga Altus Candidates</h4>
+
+</div>
+
 </div>
 
 
