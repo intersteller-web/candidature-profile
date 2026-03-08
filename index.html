@@ -213,6 +213,11 @@ MUST READ
 <div class="candidate-item" onclick="showRumoursReality()">
 Rumours VS Reality
 </div>
+    <div class="px-3 pt-2 pb-1 text-muted small">
+Detailed document of on-going/completed workitems</div>
+<div class="candidate-item" onclick="showPdf()">
+Detailed Report
+</div>
 </div>
 
 
@@ -795,6 +800,29 @@ Clarifying common rumours with actual facts.
 </section>
 
 <hr>
+
+`
+
+}
+
+function showPdf(){
+
+document.getElementById("candidateDetails").innerHTML = `
+
+<h2>Detailed Report</h2>
+
+<p>
+<a href="docs/AltusPendingPoints.pdf" target="_blank">
+Download PDF
+</a>
+</p>
+
+<iframe 
+src="docs/report.pdf"
+width="100%"
+height="700px"
+style="border:none;">
+</iframe>
 
 `
 
