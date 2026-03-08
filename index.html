@@ -68,18 +68,39 @@ border-right:1px solid #ddd;
 overflow-y:auto;
 }
 
+.left-panel{
+height:100%;
+display:flex;
+flex-direction:column;
+}
+
+.candidate-section{
+flex:0 0 60%;
+display:flex;
+flex-direction:column;
+}
+
+.candidate-list{
+overflow-y:auto;
+margin-top:8px;
+}
+
+.section-title{
+font-weight:bold;
+margin-bottom:6px;
+padding-left:5px;
+}
+
 .candidate-item{
+padding:8px;
+margin:4px 0;
+background:#f5f7fb;
+border-radius:4px;
 cursor:pointer;
-padding:12px;
-margin:8px 10px;
-background:#f8f9fa;
-border-radius:6px;
-border:1px solid #e3e6ea;
-font-weight:500;
 }
 
 .candidate-item:hover{
-background:#e9f2ff;
+background:#e3ebf7;
 }
 
 .candidate-photo{
@@ -155,7 +176,15 @@ well-managed, safe, and harmonious community for all residents.
 
 <div class="col-md-3 sidebar">
 
-<h4 class="p-3">Candidates</h4>
+<div class="left-panel">
+
+<div class="candidate-section">
+
+<div class="section-title">
+Candidates
+</div>
+
+<div class="candidate-list">
 
 <div class="candidate-item" onclick="showCandidate('sandesh')">
 Sandesh Garud - D1001
@@ -204,7 +233,8 @@ Sultan Khan - D207
 <div class="candidate-item" onclick="showCandidate('ashish')">
 Ashish Varma - D1104
 </div>
-    
+</div>
+</div>
 <hr class="mx-3">
 
 <div class="px-3 pt-2 pb-1 text-muted small">
