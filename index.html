@@ -129,6 +129,16 @@ text-decoration:none;
 text-decoration:underline;
 }
 
+.header-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+#google_translate_element{
+font-size:13px;
+}
+
 </style>
 
 </head>
@@ -145,9 +155,13 @@ text-decoration:underline;
 
 <div class="header-content">
 
-<h1>
-Transparent Governance • Strong Community • Better Future
-</h1>
+<div class="header-top">
+            <div class="header-slogan">
+                Transparency • Accountability • Stronger Community
+            </div>
+
+            <div id="google_translate_element"></div>
+        </div>
 
 <hr>
 
@@ -862,6 +876,17 @@ style="border:none;">
 }
 
 </script>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+  {
+    pageLanguage: 'en',
+    includedLanguages: 'en,hi,mr'
+  },
+  'google_translate_element');
+}
+</script>
 
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
