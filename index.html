@@ -2,7 +2,14 @@
 <html>
 
 <head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BRPLDZ61YD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-BRPLDZ61YD');
+</script>
 <title>Ganga Altus Candidates</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -776,7 +783,14 @@ let workList = createList(c.work)
 let contributionList = createList(c.contribution)
 let WhatibringList = createList(c.Whatibring)
 
-document.getElementById("candidateDetails").innerHTML = `
+// document.getElementById("candidateDetails").innerHTML = `
+
+document.getElementById("candidateDetails").innerHTML = name;
+
+    // Google Analytics Event
+    gtag('event', 'candidate_view', {
+        'candidate_name': name
+    });
 
 <h2>${c.name}</h2>
 
@@ -929,6 +943,8 @@ function googleTranslateElementInit() {
   'google_translate_element');
 }
 </script>
+
+
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
